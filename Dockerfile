@@ -17,7 +17,8 @@ RUN apt-get install -y \
     php-xdebug \
     wget \
     git \
-    zip
+    zip \
+    php7.0-zip
 
 # for development
 ADD ./setup-dev.sh /usr/local/setup-dev.sh
