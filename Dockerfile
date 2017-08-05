@@ -20,7 +20,7 @@ RUN apt-get install -y \
     zip
 
 # for development
-ADD dev/setup-dev.sh /usr/local/setup-dev.sh
+ADD ./setup-dev.sh /usr/local/setup-dev.sh
 RUN sh /usr/local/setup-dev.sh
 ENV PATH "/root/.composer/vendor/bin:${PATH}"
 
