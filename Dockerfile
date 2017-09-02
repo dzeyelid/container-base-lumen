@@ -2,9 +2,8 @@ FROM ubuntu:16.04
 
 ENV WORK_DIR /var/www/html
 
-RUN apt-get update -y
-
-RUN apt-get install -y \
+RUN apt-get update -y && \
+    apt-get install -y \
     nginx \
     php7.0 \
     php7.0-fpm \
@@ -13,7 +12,8 @@ RUN apt-get install -y \
     php-xml
 
 # for development
-RUN apt-get install -y \
+RUN apt-get update -y && \
+    apt-get install -y \
     php-xdebug \
     wget \
     git \
